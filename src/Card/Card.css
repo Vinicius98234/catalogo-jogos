@@ -1,0 +1,44 @@
+/* Card.css */
+
+.Card {
+    border-radius: 8px; /* Arredondamento dos cantos do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para efeito de profundidade */
+    overflow: hidden; /* Garante que os elementos internos não saiam do card */
+    background-color: #ffffff; /* Cor de fundo do card */
+    max-width: 300px; /* Largura máxima do card */
+    margin: 16px; /* Espaçamento ao redor do card */
+    font-family: Arial, sans-serif; /* Fonte padrão do card */
+    transition: transform 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+
+.Card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o card ao passar o mouse */
+}
+
+.Card img {
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    height: auto; /* Altura ajusta automaticamente para manter a proporção */
+    display: block; /* Remove o espaço em branco abaixo da imagem */
+}
+
+.Titulo h1 {
+    font-size: 1.5em; /* Tamanho da fonte do título */
+    margin: 16px 0; /* Margem superior e inferior do título */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto do título */
+}
+
+.Subtitulo h2 {
+    font-size: 1.2em; /* Tamanho da fonte do subtítulo */
+    margin: 8px 0; /* Margem superior e inferior do subtítulo */
+    color: #666; /* Cor do texto do subtítulo */
+    text-align: center; /* Centraliza o texto do subtítulo */
+}
+
+.descricao p {
+    font-size: 1em; /* Tamanho da fonte da descrição */
+    color: #444; /* Cor do texto da descrição */
+    padding: 0 16px; /* Espaçamento lateral para a descrição */
+    margin: 0; /* Remove margens padrão */
+    text-align: center; /* Centraliza o texto da descrição */
+}
