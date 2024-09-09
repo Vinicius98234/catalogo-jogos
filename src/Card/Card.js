@@ -1,27 +1,29 @@
-import './Card.css'
+import './Card.css';
 
-export default function Card({imagem,titulo,genero,desenvolvedor,plataforma,descricao}){
-    return(
-        <div className = 'Card'>
-            <img src = {imagem} alt = 'Foto do Jogo'/>
-            <div className = 'Titulo'>
-                <h1>{titulo}</h1>
-            </div>
-            <div className = 'genero'>
-                <h4>{genero}</h4>
-            </div>
-            <div className = 'desenvolvedor'>
-                <h4>{desenvolvedor}</h4>
-            </div>
-            <div className = 'plataforma'>
-                <h4>{plataforma}</h4>
-            </div>
-            <div className = 'descricao'>
-                <p>{descricao}</p>
+export default function Card({ capa, logo, titulo, ano, nota }) {
+    let tipoNota
+    if (7 < nota && nota <= 10) {
+        tipoNota = 'nota-alta';
+    } else if (nota == 7) {
+        tipoNota = 'nota-media';
+    } else {
+        tipoNota = 'nota-baixa';
+    }
+    return <div className="card">
+        <div className="thumbnail">
+            <img width={300} height={150} src={capa} alt="" />
+            <img width={200} height={50} src={logo} alt="" />
+        </div>
+        <div className="conteudo">
+            <div className="conteudo-principal">
+                <div className="titulo">{titulo}</div>
+                <div className="ano">{ano}</div>
             </div>
         </div>
-    )
-    
-    
-    
+        <div className="conteudo-extra">
+            <div className={ 'nota ' + tipoNota }>
+                {nota}
+            </div>
+        </div>
+    </div>
 }

@@ -1,44 +1,65 @@
-/* Card.css */
+.card {
+  border: 1px solid rgb(0 0 0 / 20%);
+  box-shadow: 0 1px 10px rgb(151 151 151 / 60%);
+  border-radius: 10px;
+  width: 300px;
+  transition: all 0.3s;
 
-.Card {
-    border-radius: 8px; /* Arredondamento dos cantos do card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para efeito de profundidade */
-    overflow: hidden; /* Garante que os elementos internos não saiam do card */
-    background-color: #ffffff; /* Cor de fundo do card */
-    max-width: 300px; /* Largura máxima do card */
-    margin: 16px; /* Espaçamento ao redor do card */
-    font-family: Arial, sans-serif; /* Fonte padrão do card */
-    transition: transform 0.3s ease; /* Efeito de transição ao passar o mouse */
-}
+  &:hover {
+    box-shadow: 0 1px 30px rgb(151 151 151);
 
-.Card:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente o card ao passar o mouse */
-}
+    img {
+      filter: opacity(0.9);
+    }
+  }
 
-.Card img {
-    width: 100%; /* Imagem ocupa toda a largura do card */
-    height: auto; /* Altura ajusta automaticamente para manter a proporção */
-    display: block; /* Remove o espaço em branco abaixo da imagem */
-}
+  .thumbnail {
+    line-height: 0;
 
-.Titulo h1 {
-    font-size: 1.5em; /* Tamanho da fonte do título */
-    margin: 16px 0; /* Margem superior e inferior do título */
-    color: #333; /* Cor do texto */
-    text-align: center; /* Centraliza o texto do título */
-}
+    img {
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      vertical-align: middle;
 
-.Subtitulo h2 {
-    font-size: 1.2em; /* Tamanho da fonte do subtítulo */
-    margin: 8px 0; /* Margem superior e inferior do subtítulo */
-    color: #666; /* Cor do texto do subtítulo */
-    text-align: center; /* Centraliza o texto do subtítulo */
-}
+      &:last-of-type {
+        object-fit: contain;
+        text-align: center;
+        margin-top: -90px;
+      }
+    }
+  }
 
-.descricao p {
-    font-size: 1em; /* Tamanho da fonte da descrição */
-    color: #444; /* Cor do texto da descrição */
-    padding: 0 16px; /* Espaçamento lateral para a descrição */
-    margin: 0; /* Remove margens padrão */
-    text-align: center; /* Centraliza o texto da descrição */
+  .conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .conteudo-principal {
+      padding: 10px;
+      .titulo {
+        font-size: 20px;
+        font-weight: 500;
+        text-align: left;
+      }
+
+      .ano {
+        font-size: 15px;
+        text-align: left;
+      }
+    }
+
+    .nota {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 30px;
+      background: green;
+      height: 100%;
+      width: 50px;
+      color: white;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+    }
+  }
 }
