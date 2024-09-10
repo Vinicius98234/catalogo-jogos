@@ -1,7 +1,52 @@
-.card-list {
+/* .card-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     gap: 50px;
+  } */
+/* Catalogo.css */
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card-list .card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-list .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.25em;
+  margin: 10px 0;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .card-list {
+      grid-template-columns: 1fr; /* Disposição em uma coluna em telas menores */
   }
+}
+
+

@@ -1,6 +1,6 @@
 import './Card.css';
 
-export default function Card({ capa, logo, titulo, ano, nota }) {
+export default function CardCard({ capa, logo, titulo, ano, nota, generos, plataformas }) {
     let tipoNota
     if (7 < nota && nota <= 10) {
         tipoNota = 'nota-alta';
@@ -19,6 +19,12 @@ export default function Card({ capa, logo, titulo, ano, nota }) {
                 <div className="titulo">{titulo}</div>
                 <div className="ano">{ano}</div>
             </div>
+        </div>
+        <div className="generos">
+            <strong>Gêneros:</strong> {}
+        </div>
+        <div className="plataformas">
+            <strong>Plataformas:</strong> {}
         </div>
         <div className="conteudo-extra">
             <div className={ 'nota ' + tipoNota }>

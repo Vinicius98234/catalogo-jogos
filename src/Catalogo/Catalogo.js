@@ -19,7 +19,7 @@ export default function Catalogo() {
             {jogos.map((jogo, i) => (
                 <Card
                     key={i}
-                    capa={jogo.urlCapaPaisagem}
+                    capa={jogo.urlCapa}
                     logo={jogo.urlLogo}
                     titulo={jogo.nome}
                     ano={format(jogo.dataLancamento, 'yyyy')}
